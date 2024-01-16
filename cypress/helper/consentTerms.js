@@ -1,8 +1,8 @@
 class consentTerms {
 	acceptAll() {
-		cy.get("#usercentrics-root").then(($el) => {
+		cy.get("#usercentrics-root").shadow().find('[data-testid="uc-accept-all-button"]').then(($el) => {
 			try {
-				if (
+			if (
 					$el.length &&
 					cy
 						.get("#usercentrics-root")
@@ -14,7 +14,7 @@ class consentTerms {
 						.shadow()
 						.find('[data-testid="uc-accept-all-button"]')
 						.click();
-				}else{return false}
+				}else{}
 			} catch {
             
             }
