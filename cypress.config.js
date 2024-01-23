@@ -10,5 +10,6 @@ module.exports = defineConfig({
 		baseUrl: "https://www.festoolcanada.com/",
 		experimentalStudio: true,
 		experimentalOriginDependencies: true,
+		includeShadowDom: true,
 	},
 });

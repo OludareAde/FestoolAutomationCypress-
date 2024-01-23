@@ -1,23 +1,17 @@
 class consentTerms {
 	acceptAll() {
-		cy.get("#usercentrics-root").shadow().find('[data-testid="uc-accept-all-button"]').then(($el) => {
+		cy.get("#usercentrics-root").shadow()
+						.find('[data-testid="uc-accept-all-button"]').then((el) => {
 			try {
-			if (
-					$el.length &&
-					cy
-						.get("#usercentrics-root")
-						.shadow()
-						.find('[data-testid="uc-accept-all-button"]')
-						.should("exist")
-				) {
+				if (el) {
 					cy.get("#usercentrics-root")
 						.shadow()
 						.find('[data-testid="uc-accept-all-button"]')
 						.click();
-				}else{}
-			} catch {
-            
-            }
+				}else{
+                    cy.log(false)
+                }
+			} catch {}
 		});
 	}
 }
