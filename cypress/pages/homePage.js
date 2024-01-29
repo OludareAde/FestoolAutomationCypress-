@@ -10,7 +10,7 @@ class homePage {
 		this.homepageelements.loginButton().click();
 	}
 	clickOnLoginToMyFestool() {
-		this.homepageelements.loginToMyFestool().click();
+		this.homepageelements.loginToMyFestool().click({force:true});
 	}
 
 	clickOn_CreateYourMyFestoolAccount() {
