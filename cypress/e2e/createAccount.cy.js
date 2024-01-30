@@ -6,7 +6,7 @@ describe("This are actions that relates to creating account", () => {
 	beforeEach(()=> {
 		cy.fixture('userinfo').then(function(data){
 			 this.data = data
-			//cy.log(this.obj)
+			 cy.log(this.data);
 		})
 	})
 	it("Create a new account", function() {
