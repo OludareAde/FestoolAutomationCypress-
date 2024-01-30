@@ -11,5 +11,6 @@ module.exports = defineConfig({
 		experimentalStudio: true,
 		experimentalOriginDependencies: true,
 		includeShadowDom: true,
+		defaultCommandTimeout: 10_000
 	},
 });

@@ -5,14 +5,30 @@ class createAccountPage {
 		password: () => cy.get("#NewPassword"),
 		termsofuse: () => cy.get("#TermsAndConditionsAcceptance"),
 		nextbutton: () => cy.get("button").contains("Next"),
+		returntologin: () => cy.findAllByText("Return to login"),
 	};
 
-	createAMyFestoolAccount() {
-		this.createAccountPage_Elements.selectCountry().select("en-US");
-		this.createAccountPage_Elements.email().type("darryadedi@gmail.com");
-		this.createAccountPage_Elements.password().type("Password!2");
+	createAMyFestoolAccount(obj) {
+		this.createAccountPage_Elements.selectCountry().select(obj.country);
+		this.createAccountPage_Elements.email().type(obj.email);
+		this.createAccountPage_Elements.password().type(obj.password);
 		this.createAccountPage_Elements.termsofuse().click();
 		this.createAccountPage_Elements.nextbutton().click();
+	}
+
+	backToLogin() {
+		this.createAccountPage_Elements.returntologin().click();
+	}
+
+	verifyTheCheckmark() {
+		cy.get(".main-container").then((el) => {
+			if (el) {
+				cy.get(".main-container")					
+					.find("svg")
+					.should("have.attr", "fill")
+					.should("contains", "currentColor");
+			}
+		});
 	}
 }
 

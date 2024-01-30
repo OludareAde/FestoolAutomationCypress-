@@ -8,7 +8,7 @@ class consentTerms {
 					if (el) {
 						cy.get("#usercentrics-root")
 							.shadow()
-							.find('[data-testid="uc-accept-all-button"]')
+							.find('[data-testid="uc-accept-all-button"]', { timeout: 10000 })
 							.click();
 					} else {
 						cy.log(false);

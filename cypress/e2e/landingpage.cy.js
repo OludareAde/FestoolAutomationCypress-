@@ -38,4 +38,37 @@ describe("Navigating to the landing page", () => {
 			});
 		});
 	});
+
+	it("sets and get a token in local storage", () => {
+		cy.setLocalStorage("token", "ab2343!x%99");
+		cy.getLocalStorage("token").should("eq", "ab2343!x%99");
+		
+		
+			
+	});
+
+	it("get the local storage value for the version", () => {
+		cy.getLocalStorage("uc_ui_version").should("eq", "3.34.1").then(()=>
+		{
+			console.log(localStorage.getItem("uc_ui_version"));
+		})
+		
+	});
+
+	it("search for a product by name", () => {	
+		consentTerms.acceptAll();	
+		cy.get(".meta-navigation__item-icon").eq(2).click();
+		cy.get(".main-search-field")
+			.find("input")
+			.eq(0)
+			.type("Cordless table saw CSC SYS 50 EBI-Basic{enter}", {
+				sensitive: true,
+			});
+        cy.url().should("include", `${encodeURIComponent("Cordless table saw CSC SYS 50 EBI-Basic")}`);
+		cy.url().should(
+			"include",
+			Cypress.config().baseUrl + "search-results-page?"
+		);
+		cy.get('.current').findByText('Search Results Page').should('be.visible')
+	})
 });

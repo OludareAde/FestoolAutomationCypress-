@@ -5,11 +5,11 @@ describe("Search by trade section", () => {
 		cy.visit("/");
 		consentTerms.acceptAll();
 	});
-	it.skip("Check that Search by Trade section is present", () => {
+	it("Check that Search by Trade section is present", () => {
 		cy.get(".link-dropdown").should("exist");
 	});
 
-	it.skip("Check if Search by trade headline is present", () => {
+	it("Check if Search by trade headline is present", () => {
 		cy.get(".link-dropdown")
 			.find("h1")
 			.findAllByText("Search by trade")
