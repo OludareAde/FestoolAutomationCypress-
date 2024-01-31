@@ -5,8 +5,8 @@ module.exports = defineConfig({
 		setupNodeEvents(on, config) {
 			// implement node event listeners here
 		},
-		viewportHeight: 1000,
-		viewportWidth: 1000,
+		viewportHeight: 1600,
+		viewportWidth: 1600,
 		baseUrl: "https://www.festoolcanada.com/",
 		experimentalStudio: true,
 		experimentalOriginDependencies: true,
