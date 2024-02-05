@@ -4,9 +4,10 @@ import consentTerms from "../helper/consentTerms";
 describe("Navigating to the landing page", () => {
 	beforeEach(() => {
 		cy.visit("/");
+		consentTerms.acceptAll();
 	});
 	it("Navigate landing page", () => {
-		consentTerms.acceptAll();
+		//consentTerms.acceptAll();
 	});
 
 	it("Check that Festool profile icon exist", () => {
@@ -17,7 +18,7 @@ describe("Navigating to the landing page", () => {
 			.should("contains", "festool_profile.svg");
 	});
 	it("check that the tooltip appears on hover Festool profile icon", () => {
-		consentTerms.acceptAll();
+		
 		cy.get(".meta-navigation__item-icon")
 			.find("img")
 			.eq(0)
@@ -62,13 +63,13 @@ describe("Navigating to the landing page", () => {
 
 	it("get the local storage value for the version", () => {
 		cy.getLocalStorage("uc_ui_version")
-			.should("eq", "3.34.1")
+			.should("eq", "3.35.0")
 			.then(() => {
 				console.log(localStorage.getItem("uc_ui_version"));
 			});
 	});
 
-	it.only("search for a product by name", () => {
+	it("search for a product by name", () => {
 		consentTerms.acceptAll();
 		cy.get(".meta-navigation__item-icon").eq(2).click();
 		cy.get(".main-search-field:visible")
