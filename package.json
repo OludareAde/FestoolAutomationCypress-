@@ -4,12 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "npm run lint",
-		"start": "node ./scripts/start.js",
-		"dev": "npm start",
-		"test": "npm start & cypress run",
-		"pretest": "npm run lint",
-		"print-env": "print-env"
+		
 	},
 	"resolutions": {
 		"node-sass": "https://registry.npmjs.org/dart-sass/-/dart-sass-1.25.0.tgz"
