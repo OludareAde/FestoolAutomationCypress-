@@ -6,6 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "resolutions": {
+  "node-sass": "https://registry.npmjs.org/dart-sass/-/dart-sass-1.25.0.tgz"
+},
+"scripts": {
+  "preinstall": "npx npm-force-resolutions"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
