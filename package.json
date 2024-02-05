@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+    "npm run": "npm run build"
 	},
 	"resolutions": {
 		"node-sass": "https://registry.npmjs.org/dart-sass/-/dart-sass-1.25.0.tgz"
