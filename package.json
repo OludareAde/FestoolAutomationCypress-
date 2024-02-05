@@ -1,25 +1,24 @@
 {
-  "name": "festoolsautomation",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "resolutions": {
-  "node-sass": "https://registry.npmjs.org/dart-sass/-/dart-sass-1.25.0.tgz"
-},
-"scripts": {
-  "preinstall": "npx npm-force-resolutions"
-},
-
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cypress": "^13.6.2"
-  },
-  "devDependencies": {
-    "@testing-library/cypress": "^10.0.1"
-  }
+	"name": "festoolsautomation",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"resolutions": {
+		"node-sass": "https://registry.npmjs.org/dart-sass/-/dart-sass-1.25.0.tgz"
+	},
+	"scripts": {
+		"preinstall": "npx npm-force-resolutions"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cypress": "^13.6.2"
+	},
+	"devDependencies": {
+		"@testing-library/cypress": "^10.0.1"
+	}
 }

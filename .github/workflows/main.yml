@@ -13,4 +13,5 @@ jobs:
         with:
           build: npm run build
           start: nom start
+          browser: chrome
          
