@@ -4,14 +4,20 @@ on: [push]
 
 jobs:
   cypress-run:
-    runs-on: windows-latest
+    runs-on: windows-latest   
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          build: npm run build
-          start: npm start
-          browser: chrome
+          # Action runs: using: node20 as defined in
+          # https://github.com/cypress-io/github-action/blob/master/action.yml
+          # Node.js minor version is aligned to
+          # https://github.com/actions/runner/blob/main/src/Misc/externals.sh
+          node-version: 20.8.1
+      - run: npm ci
+      - run: npm run format
+      - run: npm run build
+      - run: npm test
          
