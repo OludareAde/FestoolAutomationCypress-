@@ -16,8 +16,7 @@ jobs:
           # Node.js minor version is aligned to
           # https://github.com/actions/runner/blob/main/src/Misc/externals.sh
           node-version: 20.8.1
-      - run: npm ci
-      - run: npm run format
+      - run: npm ci    
       - run: npm run build
       - run: npm test
          
