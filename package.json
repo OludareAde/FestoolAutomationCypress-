@@ -5,6 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		
+		"test": "npm start & cypress run"
+		
 	},
 	"resolutions": {
 		"node-sass": "https://registry.npmjs.org/dart-sass/-/dart-sass-1.25.0.tgz"
